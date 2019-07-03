@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,11 +30,13 @@ public class MainActivity extends AppCompatActivity implements Serializable,
         MojRecyclerViewAdapter.OnRecyclerItemClickListener {
 
     RecyclerView rvLista;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setupToolbar();
 
         rvLista = findViewById(R.id.rv_lista);
 
@@ -49,6 +54,42 @@ public class MainActivity extends AppCompatActivity implements Serializable,
         });
 
     }
+
+    //Pocetak setup-a za toolbar
+    // action bar prikazuje opcije iz meni.xml
+    //uneti u action main.xml AppBarLayout i onda Toolbar
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    // onOptionsItemSelected method is called whenever an item in the Toolbar is selected.
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Intent intent = new Intent(this,SettingsActivity.class);
+                startActivity(intent);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    //setuje toolbar
+    private void setupToolbar(){
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        final android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_action_hamburger);
+            actionBar.setHomeButtonEnabled(true);
+            actionBar.show();
+        }
+    }
+    //kraj setup-a za toolbar
 
     private void callService(String query){
         HashMap<String, String> queryParams = new HashMap<>();
