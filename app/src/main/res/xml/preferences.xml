@@ -7,13 +7,8 @@
 
         <CheckBoxPreference
             android:defaultValue="false"
-            android:key="@string/pref_notification_key"
-            android:title="@string/pref_notification_title" />
-
-        <CheckBoxPreference
-            android:defaultValue="false"
-            android:key="@string/pref_toast_key"
-            android:title="@string/pref_toast_title" />
+            android:key="@string/pref_splashscreen_key"
+            android:title="@string/pref_splashscreen_title" />
     </PreferenceCategory>
 
 </PreferenceScreen>
