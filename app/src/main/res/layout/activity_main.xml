@@ -13,7 +13,8 @@
             android:id="@+id/searchText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_query_params_here" />
+            android:hint="@string/search_parameters"
+            android:inputType="textCapSentences"/>
 
         <Button
 
@@ -21,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/search" />
+            android:text="@string/search_button" />
 
     </LinearLayout>
     <android.support.v7.widget.RecyclerView

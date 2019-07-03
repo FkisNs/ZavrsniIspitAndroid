@@ -26,6 +26,7 @@ public class MojRecyclerViewAdapter extends
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
+        TextView tvYear;
         TextView tvTitle;
         View view;
 
@@ -33,10 +34,12 @@ public class MojRecyclerViewAdapter extends
             super(itemView);
             view = itemView;
             tvTitle = itemView.findViewById(R.id.tv_recycler_title);
+            tvYear = itemView.findViewById(R.id.tv_recycler_year);
         }
 
         public void bind(final Search search, final OnRecyclerItemClickListener listener) {
             tvTitle.setText(search.getTitle());
+            tvYear.setText(search.getYear());
             ImageView imageView = itemView.findViewById(R.id.imageView_RW);
             Picasso.get().load(search.getPoster()).into(imageView);
 
