@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ftninformatika.zavrsniispitandroid.R;
+import com.ftninformatika.zavrsniispitandroid.model.Search;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -47,7 +49,7 @@ public class MojRecyclerViewAdapter extends
         }
     }
 
-    public MojRecyclerViewAdapterListaFilmova(List<Search> listaFilmova, OnRecyclerItemClickListener listener) {
+    public MojRecyclerViewAdapter(List<Search> listaFilmova, OnRecyclerItemClickListener listener) {
         this.listaFilmova = listaFilmova;
         this.listener = listener;
     }

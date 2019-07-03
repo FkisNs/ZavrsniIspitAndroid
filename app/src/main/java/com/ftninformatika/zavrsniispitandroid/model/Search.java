@@ -3,7 +3,9 @@ package com.ftninformatika.zavrsniispitandroid.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Search {
+import java.io.Serializable;
+
+public class Search implements Serializable {
 
     @SerializedName("Title")
     @Expose
