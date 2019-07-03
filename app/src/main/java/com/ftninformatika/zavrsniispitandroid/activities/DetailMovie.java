@@ -23,6 +23,24 @@ public class DetailMovie extends AppCompatActivity {
     TextView tv_plot;
     TextView textViewTitle;
     ImageView imageView;
+    TextView year;
+    TextView rated;
+    TextView runtime;
+    TextView genre;
+    TextView director;
+    TextView writer;
+    TextView actors;
+    TextView country;
+    TextView awards;
+    TextView metaScore;
+    TextView imdbRating;
+    TextView imdbVotes;
+    TextView imdbId;
+    TextView type;
+    TextView dvd;
+    TextView boxOffice;
+    TextView production;
+    TextView website;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +50,24 @@ public class DetailMovie extends AppCompatActivity {
         tv_plot = findViewById(R.id.tv_plot);
         textViewTitle = findViewById(R.id.tv_ime_f_detalji_filma);
         imageView = findViewById(R.id.iv_f_detalji_filma);
+        year = findViewById(R.id.tv_year);
+        rated = findViewById(R.id.tv_rated);
+        runtime = findViewById(R.id.tv_runtime);
+        genre = findViewById(R.id.tv_genre);
+        director = findViewById(R.id.tv_director);
+        writer = findViewById(R.id.tv_writer);
+        actors = findViewById(R.id.tv_actors);
+        country = findViewById(R.id.tv_country);
+        awards = findViewById(R.id.tv_awards);
+        metaScore = findViewById(R.id.tv_metascore);
+        imdbRating = findViewById(R.id.tv_imdb_rating);
+        imdbVotes = findViewById(R.id.tv_imdb_votes);
+        imdbId = findViewById(R.id.tv_imdb_id);
+        type = findViewById(R.id.tv_type);
+        dvd = findViewById(R.id.tv_dvd);
+        boxOffice = findViewById(R.id.tv_boxoffice);
+        production = findViewById(R.id.tv_production);
+        website = findViewById(R.id.tv_website);
 
         //ovde sam poslao ceo objekat search preko intenta.
         Search search = (Search) getIntent().getSerializableExtra("search");
@@ -57,6 +93,24 @@ public class DetailMovie extends AppCompatActivity {
                     Movie movie = response.body();
                     textViewTitle.setText(movie.getTitle());
                     tv_plot.setText(movie.getPlot());
+                    year.setText(movie.getYear());
+                    rated.setText(movie.getRated());
+                    runtime.setText(movie.getRuntime());
+                    genre.setText(movie.getGenre());
+                    director.setText(movie.getDirector());
+                    writer.setText(movie.getWriter());
+                    actors.setText(movie.getActors());
+                    country.setText(movie.getCountry());
+                    awards.setText(movie.getAwards());
+                    metaScore.setText(movie.getMetascore());
+                    imdbRating.setText(movie.getImdbRating());
+                    imdbVotes.setText(movie.getImdbVotes());
+                    imdbId.setText(movie.getImdbID());
+                    type.setText(movie.getType());
+                    dvd.setText(movie.getDVD());
+                    boxOffice.setText(movie.getBoxOffice());
+                    production.setText(movie.getProduction());
+                    website.setText(movie.getWebsite());
                     Picasso.get().load(movie.getPoster()).into(imageView);
                 }
             }

@@ -51,6 +51,10 @@
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:orientation="vertical">
             <TextView
                 android:id="@+id/tv_year"
                 android:layout_width="match_parent"
@@ -75,6 +79,63 @@
                 android:id="@+id/tv_director"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_writer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_actors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_awards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_metascore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_imdb_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+             <TextView
+                 android:id="@+id/tv_imdb_votes"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content" />
+             <TextView
+                 android:id="@+id/tv_imdb_id"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content" />
+             <TextView
+                 android:id="@+id/tv_type"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content" />
+             <TextView
+                 android:id="@+id/tv_dvd"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content" />
+             <TextView
+                 android:id="@+id/tv_boxoffice"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content" />
+             <TextView
+                 android:id="@+id/tv_production"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content" />
+             <TextView
+                 android:id="@+id/tv_website"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content" />
+         </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
 
     </LinearLayout>
